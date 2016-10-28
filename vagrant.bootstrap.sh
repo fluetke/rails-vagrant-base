@@ -42,6 +42,6 @@ cd /vagrant
 rbenv local $RUBY
 rbenv rehash
 
-su -c "gem install bundler --no-rdoc --no-ri" -m ubuntu
-su -c "gem install rails --version $RAILS --no-rdoc --no-ri" -m ubuntu
-su -c "rbenv rehash" -m ubuntu
+sudo -u ubuntu /home/ubuntu/.rbenv/shims/gem install bundler --no-rdoc --no-ri
+sudo -u ubuntu /home/ubuntu/.rbenv/shims/gem install rails --version $RAILS --no-rdoc --no-ri
+sudo -u ubuntu rbenv rehash
